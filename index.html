@@ -23,7 +23,6 @@
             padding: 0;
             box-sizing: border-box;
             color:rgb(85,97,97);
-            cursor: none;
         }
         body{
             width:100vw;
@@ -78,25 +77,15 @@
         }
         .medium-text {
             font-family: 'Darker-Grotesque-Medium';
-     font-size:70px;
+     font-size:4.6vw;
      line-height:70px;
         }
         .small-text {
             font-family: 'Aspekta';
-     font-size:23px;
+     font-size:1.4vw;
      line-height:35px;
-     width:47vw;
+     width:45vw;
      letter-spacing:0.5px;
-        }
-        .cursor {
-            position: fixed;
-            height: 20px;
-            width: 20px;
-            border-radius: 50%;
-            background-color: rgb(85,96,96);
-            z-index: 99999999;
-            pointer-events: none;
-            transform: translate(-50%, -50%);
         }
         .fading-element {
             opacity: 1;
@@ -129,7 +118,6 @@
 </head>
 <body style="width:100vw;margin:0px;position:absolute;">
 
-    <div class="cursor"></div>
 
 <div style="height:30px;width:100vw;background-color:white;position:fixed;z-index:9999999;">
 
@@ -146,17 +134,17 @@
 
     <div id="stickytypeheader" >
         <div class="title-container-left">
-            <p onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()" style="margin-top:30px;">Technology</p>
-            <p onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()" style="margin-top:30px;">Products</p>
-            <p onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()" style="text-decoration: 1px underline;margin-top:30px;">Mission</p>
+            <p style="margin-top:30px;cursor:pointer;">Technology</p>
+            <p style="margin-top:30px;cursor:pointer;">Products</p>
+            <p style="text-decoration: 1px underline;margin-top:30px;cursor:pointer;">Mission</p>
       
         </div>
         <div class="title-container-right">
-            <p onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()" style="margin-top:-2px;">Cart</p>
+            <p style="margin-top:-2px;cursor:pointer;">Cart</p>
         </div>
         <div class="title-container-middle">
             <a href="#top">
-    <img src="air-logo-icon2.jpg" style="height:27px;margin-top:4px;" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">  
+    <img src="air-logo-icon2.jpg" style="height:27px;margin-top:4px;cursor:pointer;" >  
     </a>  
     </div>
     </div>
@@ -197,7 +185,7 @@
             modular technology solution has the power to turn our 
             world's industries into sustainable ones.<br><br>
     
-            The <span style="text-decoration: 2px underline;" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">AIRMADE™️ System</span> is ready, and it’s scaling every day. 
+            The <span style="text-decoration: 2px underline;cursor:pointer;">AIRMADE™️ System</span> is ready, and it’s scaling every day. 
             When we get every industry to use it, we’ll lower carbon 
            emissions enough to stop the climate crisis from being a crisis.<br>
         </p>
@@ -235,7 +223,7 @@
     This necessary clean energy transition requires us to change how<br> 
     <span style="letter-spacing:0.8px;">we look at the world’s largest industries, and it is widely accepted <br> </span>
     that CCUS technologies are a key ingredient in this movement. With 
-    our <span style="text-decoration: 2px underline;" onmouseenter="changeCursorColor()" onmouseleave="revertCursorColor()">AIRMADE™️ chemicals and fuel</span>, <span style="letter-spacing:0.7px;">we are 
+    our <span style="text-decoration: 2px underline;cursor:pointer;">AIRMADE™️ chemicals and fuel</span>, <span style="letter-spacing:0.7px;">we are 
     actively demonstrating the  </span>
     <span style="letter-spacing:1px;">feasibility of our technology and its role in decarbonizing our </span>
     economic systems.
@@ -290,29 +278,6 @@
     </div>
 
 <script>
-    var body = document.querySelector('body');
-    var cursor = document.querySelector('.cursor');
-
-    body.addEventListener('mousemove', function(event) {
-        cursor.style.top = event.clientY + 'px';
-        cursor.style.left = event.clientX + 'px';
-    })
-
-    function changeCursorColor() {
-        cursor.style.backgroundColor = "transparent";
-        cursor.style.opacity = "100%";
-        cursor.style.border = "2px solid rgb(85,96,96)";
-        cursor.style.width = "22px";
-        cursor.style.height = "22px";
-        cursor.style.transitionDuration = "0s";
-    }
-
-    function revertCursorColor() {
-        cursor.style.backgroundColor = "rgb(85,96,96)";
-        cursor.style.width = "20px";
-        cursor.style.height = "20px";
-        cursor.style.transitionDuration = "0s";
-    }
 
     $(function() {
         var stickyHeaderTop = $('#stickytypeheader').offset().top;
@@ -327,7 +292,7 @@
             }
 
             // Check if window.pageYOffset is greater than 5000 pixels
-            if (window.pageYOffset > 9150) {
+            if (window.pageYOffset > 9270) {
                 $('#v0').css({ position: 'absolute', top: '9270px' });
             } else {
                 $('#v0').css({ position: 'fixed', top: '120px' });
